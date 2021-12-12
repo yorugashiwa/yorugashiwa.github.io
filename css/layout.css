@@ -3,7 +3,7 @@
 
 body{
     background:#f0f0f0;
-    font-family:'Baskervville', serif,"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-family:YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 	color: #333;
 	font-size:1rem;
 	line-height:1.85;
@@ -56,11 +56,15 @@ h2{
     color: #fff;
 }
 
-.heading-block p{
-    font-size:1.2vw;
-    letter-spacing: 0.5em;
+.heading-block img{
+    max-width:100vw;
 }
-
+.iframe_wrapper{
+    width:800px;
+    max-width:80vw;
+    height:500px;
+    max-height:50vw;
+}
 /*横幅が768px以下になった際の指定*/
 @media only screen and (max-width:768px) {
 .heading-block h1,
@@ -154,7 +158,10 @@ h2{
     text-align: center;
     margin: 50px 0;
 }
-
+h4{
+    font-size:16px;
+    font-weight: normal;
+}
 @media screen and (max-width:768px) { 
 .modaal-content-container h3{
     margin:0 0 20px 0;

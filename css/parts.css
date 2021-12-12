@@ -14,6 +14,14 @@
 	text-align:center;
 	color:#fff;
 }
+.store_link{
+	height:50px;
+}
+
+.box-area .p{
+	background-color: rgba(255, 255, 255, 0.5);
+	padding:12px;
+}
 
 /* Loading画像中央配置　*/
 #splash_text {
