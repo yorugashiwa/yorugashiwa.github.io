@@ -5,7 +5,6 @@ body{
     background:#f0f0f0;
     font-family:YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 	color: #333;
-	font-size:1rem;
 	line-height:1.85;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -13,11 +12,6 @@ body{
 	word-wrap: break-word;
 }
 
-@media screen and (max-width:768px) {
-body{
-	font-size:0.8rem;
-	}
-}
 
 ul{
 	margin:0;
