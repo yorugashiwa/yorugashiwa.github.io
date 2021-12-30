@@ -1,3 +1,13 @@
+var mySwiper = new Swiper('.swiper-container', {
+	centeredSlides: true,
+	spaceBetween: 30,
+	slidesPerView: 2,
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true
+	}
+});
 /*===========================================================*/
 /*機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる*/
 /*===========================================================*/
