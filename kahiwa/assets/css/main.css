@@ -14,13 +14,17 @@ header{
 	background-color: #fff;
 	box-sizing: border-box;
 }
-.main{
-	background-image:url("bg.png") ;
-	width:100vw;
-	min-height: 100vh;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
+.main:before{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100vw;
+    height:100vh;
+    background:url("bg.png") no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    content:"";
 }
 div{
 	overflow:hidden;
@@ -77,9 +81,10 @@ h3{
 }
 #section2{
 	position: fixed;
-	top:0;
-	display:table;
-	width:100vw;
+	display: table;
+	top:-1000vh;
+	width:0;
+	height:0;
 	opacity:0;
 	background-color: rgb(170, 170, 170);
 	animation-name: opening ;
@@ -94,13 +99,22 @@ h3{
 }
 @keyframes opening{
 	0%{
+		top:0;
 		opacity:1;
+		width:100vw;
+		height:100vh;
 	}
 	60%{
+		top:0;
 		opacity:1;
+		width:100vw;
+		height:100vh;
 	}
 	100%{
+		top:0;
 		opacity:0;
+		width:100vw;
+		height:100vh;
 	}
 }
 #section3 div{
@@ -125,7 +139,57 @@ h3{
 	margin:32px auto;
 	padding:32px;
 	border-radius: 32px;
-	background-color:rgba(255, 255, 255, 0.4);
+	background-color:rgba(255, 255, 255, 0.6);
+}
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#more{
+    animation: show .3s linear 0s;
+	position: fixed;
+	width:100vw;
+	height: 100vh;
+	z-index: 3;
+	top:0;
+	background-color: rgba(0, 0, 0, 0.4);
+	overflow:scroll;
+}
+
+#more p{
+	width:92vw;
+	height:auto;
+	margin:32px auto;
+	padding:16px;
+	border-radius: 16px;
+	background-color:rgba(255, 255, 255,1);
+	box-sizing: border-box;
+
+}
+.hid{
+	display: none;
+}
+.card1{
+	width:92%;
+	height:auto;
+	margin:32px auto;
+	padding:32px;
+	border-radius: 32px;
+	background-color:rgba(255, 255, 255, 0.6);
+}
+#more-button{
+	width:30px;
+	height:30px;
+	background-color: aqua;
+}
+#close-button{
+	width:30px;
+	height:30px;
+	background-color: aqua;
 }
 .card h4{
 	text-align: center;
