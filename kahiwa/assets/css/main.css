@@ -1,0 +1,147 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family:'Noto Sans JP';
+}
+header{
+	position: fixed;
+	top:0;
+	width:100vw;
+	height:10vh;
+	overflow:hidden;
+	padding:0 32px;
+	background-color: rgb(255, 255, 255);
+	box-sizing: border-box;
+}
+div{
+	background-color: rgb(125, 168, 206);
+	overflow:hidden;
+	box-sizing: border-box;
+}
+section{
+	height:100vh;
+	background-color: rgb(88, 88, 88);
+	overflow: hidden;
+}
+h3{
+	width:100%;
+	text-align: center;
+	font-size: 32px;
+	margin:0;
+	padding: 16px 0;
+}
+.logo{
+	width:60%;
+	height:100%;
+	background-color: black;
+	position:absolute;
+	left:32px;
+}
+.hum{
+	width:10vh;
+	height:10vh;
+	background-color: rgb(255, 255, 255);
+	position:absolute;
+	right:5px;
+
+}
+.hum span{
+	display:block;
+	width:30px;
+	height:2px;
+	margin:5px auto;
+	
+	background-color: black;
+}
+.hum span:nth-of-type(1){
+	margin-top:calc(5vh - 10px);
+}
+#section1{
+	width:100vw;
+	height:90vh;
+	margin-top:10vh;
+	background-color: rgb(128, 128, 128);
+	text-align: center;
+}
+#section2{
+	width:100vw;
+	background-color: rgb(170, 170, 170);
+	display:table;
+}
+#section2 p{
+	height:100%;
+	text-align: center;
+	vertical-align: middle;
+	font-size:16px;
+	display:table-cell;
+}
+#section3{
+	background-color: blue;
+}
+#section3 div{
+	width:50%;
+	height:40vh;
+	padding:8px;
+	background-color: aquamarine;
+	float:left;
+
+}
+#section6{
+	height:auto;
+	background-color: rgb(212, 174, 153);
+}
+.card{
+	width:85%;
+	height:auto;
+	margin:32px auto;
+	padding:32px;
+	border-radius: 32px;
+}
+.card h4{
+	text-align: center;
+	margin:0 0 16px 0;
+	font-size:18px;
+}
+.gaiyou1{
+	text-align: center;
+	font-size:16px;
+	margin:16px 0;
+	line-height: 32px;
+}
+.gaiyou1 span{
+	font-size:1.5rem;
+	padding:0 2px;
+}
+.gaiyou2{
+	margin:0 auto;
+	width:fit-content;
+	display:block;
+	font-size:0.7rem;
+}
+.card table{
+	margin:16px auto;
+}
+.ticet-table tr td:nth-of-type(2){
+	font-size: 1.5rem;
+	text-align: right;
+}
+td{
+	vertical-align: bottom;
+}
+.ticket-syousai{
+	margin:0 auto;
+	width:fit-content;
+	display:block;
+	font-size:0.7rem;
+}
+.info-table tr td{
+	padding:4px 3px;
+}
+.info-table tr td{
+	text-align: center;
+	vertical-align: middle;
+}
+.info-table tr :nth-of-type(2){
+	text-align: left;
+}
