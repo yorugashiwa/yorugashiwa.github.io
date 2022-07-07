@@ -164,7 +164,7 @@ h3{
 	width:92vw;
 	height:auto;
 	margin:32px auto;
-	padding:16px;
+	padding:16px　16px 32px;
 	border-radius: 16px;
 	background-color:rgba(255, 255, 255,1);
 	box-sizing: border-box;
