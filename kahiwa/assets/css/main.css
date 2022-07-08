@@ -92,6 +92,7 @@ h3{
 	background-color: #EBEBEB;
 	animation-name: opening ;
 	animation-duration: 5s;
+	z-index:5;
 }
 #section2 p{
 	height:100%;
@@ -100,6 +101,18 @@ h3{
 	font-size:16px;
 	display:table-cell;
 }
+
+#section4 div{
+	width: 100%;
+	height:80%;
+	padding-left: "10px";
+	padding-right: "2px";
+	texr-align: center;
+}
+#section4 iframe{
+	
+}
+
 @keyframes opening{
 	0%{
 		top:0;
@@ -137,18 +150,84 @@ h3{
 		height:100vh;
 	}
 }
-#section3 div{
+#section3 .img-frame{
 	width:46%;
 	height:40vh;
-	padding:8px;
+	padding:8px 8px 16px;
+	border-radius: 8px;
 	margin:2%;
-	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, .6);
 	overflow: hidden;
 	float:left;
+	
 }
+
+.button003{
+	margin:16px auto; 
+}
+.button003 a {
+    background: #0577B4;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 10px 25px;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+	text-align: center;
+}
+.button003 a:hover {
+    background: #313131;
+    color: #FFF;
+}
+.button003 a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button003 a:hover:after {
+    border-color: #FFF;
+}
+.ticket-button{
+	position: fixed;
+	background-color: #0577B4;
+	bottom:20px;
+	right:20px;
+	border-radius: 8px;
+	box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.2);
+	z-index:4;
+}
+.ticket-button a{
+	display: inline-block;
+	padding:16px 32px; 
+	color: #ffffff;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+
 #section3 img{
 	width:100%;
-	
+	border-radius: 5px;
+}
+.name1{
+	font-size:.8rem;
+}
+.name2{
+	font-size:.6rem;
+
 }
 #section6{
 	height:auto;
