@@ -11,17 +11,30 @@ header{
 	height:10vh;
 	overflow:hidden;
 	padding:0 32px;
-	background-color: rgb(255, 255, 255);
+	background-color: #fff;
 	box-sizing: border-box;
+	display: table;
+	
+	box-shadow:  0px 0px 3px 0px rgba(0,0,0,0.2);
+}
+.main:before{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100vw;
+    height:100vh;
+    background:url("bg.png") no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    content:"";
 }
 div{
-	background-color: rgb(125, 168, 206);
 	overflow:hidden;
 	box-sizing: border-box;
 }
 section{
 	height:100vh;
-	background-color: rgb(88, 88, 88);
 	overflow: hidden;
 }
 h3{
@@ -32,11 +45,16 @@ h3{
 	padding: 16px 0;
 }
 .logo{
-	width:60%;
-	height:100%;
-	background-color: black;
-	position:absolute;
-	left:32px;
+	width:100%;
+	height:8.5vh;
+	padding:1.5vh 0 0;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.logo img{
+	max-width:100%;
+	max-height: 100%;
 }
 .hum{
 	width:10vh;
@@ -61,13 +79,21 @@ h3{
 	width:100vw;
 	height:90vh;
 	margin-top:10vh;
-	background-color: rgb(128, 128, 128);
-	text-align: center;
+}
+#section1 img{
+	width:100%;
 }
 #section2{
-	width:100vw;
-	background-color: rgb(170, 170, 170);
-	display:table;
+	position: fixed;
+	display: table;
+	top:-1000vh;
+	width:0;
+	height:0;
+	opacity:0;
+	background-color: #EBEBEB;
+	animation-name: opening ;
+	animation-duration: 5s;
+	z-index:5;
 }
 #section2 p{
 	height:100%;
@@ -77,19 +103,142 @@ h3{
 	display:table-cell;
 }
 #section3{
-	background-color: blue;
+	width:100vw;
+	height:auto;
+	margin-top:10vh;
 }
-#section3 div{
-	width:50%;
+
+
+
+#section4 div{
+	width: 100%;
+	height:80%;
+	padding-left: "10px";
+	padding-right: "2px";
+	texr-align: center;
+}
+#section4 iframe{
+	
+}
+
+@keyframes opening{
+	0%{
+		top:0;
+		opacity:1;
+		width:100vw;
+		height:100vh;
+		color:#00000000;
+	}
+	20%{
+		top:0;
+		opacity:1;
+		width:100vw;
+		height:100vh;
+		color:#00000000;
+
+	}
+	60%{
+		top:0;
+		opacity:1;
+		width:100vw;
+		height:100vh;
+		color:#000000;
+	}
+	70%{
+		top:0;
+		opacity:1;
+		width:100vw;
+		height:100vh;
+		color:#000000;
+	}
+	100%{
+		top:0;
+		opacity:0;
+		width:100vw;
+		height:100vh;
+	}
+}
+#section3 .img-frame{
+	width:46%;
 	height:40vh;
-	padding:8px;
-	background-color: aquamarine;
+	padding:8px 8px 16px;
+	border-radius: 8px;
+	margin:2%;
+	background-color: rgba(255, 255, 255, .6);
+	overflow: hidden;
 	float:left;
+	
+}
+
+.button003{
+	margin:16px auto; 
+}
+.button003 a {
+    background: #0577B4;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 10px 25px;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+	text-align: center;
+}
+.button003 a:hover {
+    background: #313131;
+    color: #FFF;
+}
+.button003 a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button003 a:hover:after {
+    border-color: #FFF;
+}
+.ticket-button{
+	position: fixed;
+	background-color: #0577B4;
+	bottom:20px;
+	right:20px;
+	border-radius: 8px;
+	box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.2);
+	z-index:4;
+}
+.ticket-button a{
+	display: inline-block;
+	padding:16px 32px; 
+	color: #ffffff;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+
+#section3 img{
+	width:100%;
+	border-radius: 5px;
+}
+.name1{
+	font-size:.8rem;
+}
+.name2{
+	font-size:.6rem;
 
 }
 #section6{
 	height:auto;
-	background-color: rgb(212, 174, 153);
 }
 .card{
 	width:85%;
@@ -97,6 +246,71 @@ h3{
 	margin:32px auto;
 	padding:32px;
 	border-radius: 32px;
+	background-color:rgba(255, 255, 255, 0.6);
+}
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#more{
+    animation: show .3s linear 0s;
+	position: fixed;
+	width:100vw;
+	height: 100vh;
+	z-index: 3;
+	top:0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	overflow:scroll;
+}
+#more::before{
+	
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100vw;
+    height:100vh;
+    background:url("bg.png") no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    content:"";
+}
+#more .disc{
+	width:92vw;
+	height:auto;
+	margin:32px auto;
+	padding:64px 24px 72px;
+	border-radius: 16px;
+	background-color:rgba(255, 255, 255,.6);
+	box-sizing: border-box;
+
+}
+.hid{
+	display:none;
+}
+.card1{
+	width:92%;
+	height:auto;
+	margin:32px auto;
+	padding:32px;
+	border-radius: 32px;
+	background-color:rgba(255, 255, 255, 0.6);
+}
+#more-button, #close-button{
+	width:50%;
+	padding:8px;
+	text-align: center;
+	margin:auto;
+	background-color: #0577B4;
+	color:white;
+	border-radius: 5px;
+	text-decoration: underline;
+	font-weight: bold;
 }
 .card h4{
 	text-align: center;
@@ -134,6 +348,7 @@ td{
 	width:fit-content;
 	display:block;
 	font-size:0.7rem;
+	text-align:center;
 }
 .info-table tr td{
 	padding:4px 3px;
