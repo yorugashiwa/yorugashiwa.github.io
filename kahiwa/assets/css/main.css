@@ -100,18 +100,6 @@ h3{
 	font-size:16px;
 	display:table-cell;
 }
-
-#section4 div{
-	width: 100%;
-	height:80%;
-	padding-left: "10px";
-	padding-right: "2px";
-	texr-align: center;
-}
-#section4 iframe{
-	
-}
-
 @keyframes opening{
 	0%{
 		top:0;
