@@ -3,19 +3,32 @@ body{
 	padding: 0;
 	font-size: 14px;
 	font-family:'Noto Sans JP';
+	width:100%;
+	overflow-x: hidden;
 }
 header{
 	position: fixed;
 	top:0;
 	width:100vw;
-	height:10vh;
-	overflow:hidden;
 	padding:0 32px;
 	background-color: #fff;
 	box-sizing: border-box;
-	display: table;
-	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	box-shadow:  0px 0px 3px 0px rgba(0,0,0,0.2);
+	z-index: 4;
+}
+.logo{
+	height:10vh;
+	padding:2.5vh 0;
+}
+.logo img{
+	max-width:100%;
+	max-height: 100%;
+}
+.hum{
+	font-size:3.5vh;
 }
 .main:before{
     position:fixed;
@@ -34,46 +47,14 @@ div{
 	box-sizing: border-box;
 }
 section{
-	height:100vh;
 	overflow: hidden;
 }
 h3{
 	width:100%;
 	text-align: center;
 	font-size: 32px;
-	margin:0;
+	margin:32px 0 0;
 	padding: 16px 0;
-}
-.logo{
-	width:100%;
-	height:8.5vh;
-	padding:1.5vh 0 0;
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-}
-.logo img{
-	max-width:100%;
-	max-height: 100%;
-}
-.hum{
-	width:10vh;
-	height:10vh;
-	background-color: rgb(255, 255, 255);
-	position:absolute;
-	right:5px;
-
-}
-.hum span{
-	display:block;
-	width:30px;
-	height:2px;
-	margin:5px auto;
-	
-	background-color: black;
-}
-.hum span:nth-of-type(1){
-	margin-top:calc(5vh - 10px);
 }
 #section1{
 	width:100vw;
@@ -92,8 +73,8 @@ h3{
 	opacity:0;
 	background-color: #EBEBEB;
 	animation-name: opening ;
-	animation-duration: 5s;
-	z-index:5;
+	animation-duration: 1s;
+	z-index:10;
 }
 #section2 p{
 	height:100%;
@@ -102,13 +83,6 @@ h3{
 	font-size:16px;
 	display:table-cell;
 }
-#section3{
-	width:100vw;
-	height:auto;
-	margin-top:10vh;
-}
-
-
 
 #section4 div{
 	width: 100%;
@@ -158,25 +132,87 @@ h3{
 		height:100vh;
 	}
 }
+#section3{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width:100%;
+	margin:auto;
+}
 #section3 .img-frame{
-	width:46%;
-	height:40vh;
-	padding:8px 8px 16px;
-	border-radius: 8px;
-	margin:2%;
+	width:50%;
+	text-align: center;
+	min-height:40vh;
+	padding:1px 0 31px;
 	background-color: rgba(255, 255, 255, .6);
 	overflow: hidden;
-	float:left;
-	
+}
+
+#section3 img{
+	width:100%;
+	height:65vw;
+	object-fit:cover ;
+	object-position: 50% 0;
+}
+.img-frame .name1{
+	padding:0 8px;
+	font-size:.8rem;
+}
+.img-frame .name2{
+	font-size:.6rem;
+}
+#section3 .img-frame a{
+	text-decoration: none;
+	color:#2c2c2c;
+	font-weight: 600;
+}
+.modaal-container{
+	background-color: #EBEBEB !important;
+}
+.modaal-container img{
+	width:100vw;
+	position: relative;
+	margin-top:-30px;
+	margin-left:-30px;
+}
+.modaal-container .name1{
+	position: relative;
+	width:100vw;
+	height:200px;
+	padding:124px 32px 0;
+	text-align: right;
+	background:linear-gradient(to bottom, #ffffff00, rgba(0, 0, 0, 1));
+	margin-left:-30px;
+	margin-top: -200px;
+	color: #FFF;
+	overflow: hidden;
+	font-size: 32px;
+	font-weight: bold;
+}
+.modaal-container .name2{
+	font-size:.8rem;
+}
+.modaal-container p{
+	margin-top:32px;
+	line-height: 1.8rem;
+}
+.open {
+	cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+}
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
 }
 
 .button003{
 	margin:16px auto; 
+	z-index: 1;
 }
 .button003 a {
     background: #0577B4;
     border-radius: 16px;
-    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -192,22 +228,6 @@ h3{
     background: #313131;
     color: #FFF;
 }
-.button003 a:after {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-top: 3px solid #313131;
-    border-right: 3px solid #313131;
-    transform: rotate(45deg) translateY(-50%);
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    border-radius: 1px;
-    transition: 0.3s ease-in-out;
-}
-.button003 a:hover:after {
-    border-color: #FFF;
-}
 .ticket-button{
 	position: fixed;
 	background-color: #0577B4;
@@ -215,7 +235,7 @@ h3{
 	right:20px;
 	border-radius: 8px;
 	box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.2);
-	z-index:4;
+	z-index:2;
 }
 .ticket-button a{
 	display: inline-block;
@@ -226,24 +246,13 @@ h3{
 }
 
 
-#section3 img{
-	width:100%;
-	border-radius: 5px;
-}
-.name1{
-	font-size:.8rem;
-}
-.name2{
-	font-size:.6rem;
-
-}
 #section6{
 	height:auto;
 }
 .card{
 	width:85%;
 	height:auto;
-	margin:32px auto;
+	margin:16px auto;
 	padding:32px;
 	border-radius: 32px;
 	background-color:rgba(255, 255, 255, 0.6);
@@ -266,6 +275,7 @@ h3{
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.4);
 	overflow:scroll;
+	padding:10vh 0;
 }
 #more::before{
 	
@@ -284,7 +294,7 @@ h3{
 	width:92vw;
 	height:auto;
 	margin:32px auto;
-	padding:64px 24px 72px;
+	padding:24px;
 	border-radius: 16px;
 	background-color:rgba(255, 255, 255,.6);
 	box-sizing: border-box;
@@ -296,19 +306,19 @@ h3{
 .card1{
 	width:92%;
 	height:auto;
-	margin:32px auto;
+	margin:16px auto;
 	padding:32px;
 	border-radius: 32px;
 	background-color:rgba(255, 255, 255, 0.6);
 }
 #more-button, #close-button{
 	width:50%;
-	padding:8px;
+	padding:10px 25px;
 	text-align: center;
-	margin:auto;
+	margin:8px auto;
 	background-color: #0577B4;
 	color:white;
-	border-radius: 5px;
+	border-radius: 16px;
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -348,15 +358,29 @@ td{
 	width:fit-content;
 	display:block;
 	font-size:0.7rem;
-	text-align:center;
 }
 .info-table tr td{
 	padding:4px 3px;
-}
+} 
 .info-table tr td{
 	text-align: center;
 	vertical-align: middle;
 }
-.info-table tr :nth-of-type(2){
-	text-align: left;
+.info-table a{
+	color:#07547e;
+	text-decoration: none;
+}
+footer{
+	width: 100vw;
+	font-size: 12px;
+	padding:16px 16px 80px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .6);
+}
+footer table{
+	margin:auto;
+}
+.bigger{
+	font-size:1.5rem;
 }
