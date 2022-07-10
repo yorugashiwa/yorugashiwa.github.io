@@ -1,13 +1,19 @@
 
-
-var moreButton = document.getElementById("more-button");
-var closeButton = document.getElementById("close-button");
-var more = document.getElementById("more");
-
-moreButton.onclick = function () {
-    more.classList.remove("hid");
-}
-
-closeButton.onclick = function () {
-    more.classList.add("hid");
-}
+	$(".inline-0").modaal({
+        fullscreen:true
+    });
+    $(".inline-1").modaal({
+        fullscreen:true
+    });
+    $(".inline-2").modaal({
+        fullscreen:true
+    });
+    $(".inline-3").modaal({
+        fullscreen:true
+    });
+    $(".inline-4").modaal({
+        fullscreen:true
+    });
+    $(".inline-5").modaal({
+        fullscreen:true
+    });
