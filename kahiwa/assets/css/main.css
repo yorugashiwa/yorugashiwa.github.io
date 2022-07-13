@@ -69,7 +69,7 @@ header{
 	box-shadow:  0px 0px 3px 0px rgba(0,0,0,0.2);
 	z-index: 4;
 	border-bottom:1px solid rgba(0, 0, 0, .2);
-	height:10vh;
+	height:70px;
 }
 .logo{
 	height:55%;
@@ -79,7 +79,7 @@ header{
 	max-height: 100%;
 }
 .hum{
-	font-size:3.5vh;
+	font-size:24px;
 }
 .main:before{
     position:fixed;
@@ -105,14 +105,13 @@ h3{
 	text-align: center;
 	font-size: 32px;
 	margin:0;
-	padding:10vh 0 16px;
+	padding:70px 0 16px;
 }
 main{
-	padding-top:10vh;
+	padding-top:70px;
 }
 #section1{
 	width:100%;
-	height:90vh;
 }
 #section1 img{
 	width:100%;
@@ -156,21 +155,13 @@ main{
 		color:#00000000;
 	}
 	20%{
-		top:0;
-		opacity:1;
-		width:100vw;
-		height:100vh;
 		color:#00000000;
 
 	}
-	60%{
-		top:0;
-		opacity:1;
-		width:100vw;
-		height:100vh;
+	50%{
 		color:#000000;
 	}
-	70%{
+	60%{
 		top:0;
 		opacity:1;
 		width:100vw;
@@ -210,7 +201,6 @@ main{
 #section3 .img-frame{
 	width:100%;
 	text-align: center;
-	min-height:40vh;
 	padding:0 0 32px;
 	background-color: rgba(255, 255, 255, .6);
 	overflow: hidden;
@@ -411,12 +401,13 @@ footer table{
 }
 @media screen and (min-width:700px) {
 	header{
-		height:15vh;
+		height:90px;
 	}
 	main{
 		max-width:700px;
 		margin:auto;
 		font-size:16px;
+		padding-top: 90px;
 	}
 	#section3 img {
     height: auto;
