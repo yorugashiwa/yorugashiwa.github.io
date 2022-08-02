@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=japanese");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=japanese");
+@media screen and (max-width: 1000px) {
+  .only_pc {
+    display: none; } }
+
+.only_sp {
+  display: none; }
+  @media screen and (max-width: 1000px) {
+    .only_sp {
+      display: block; } }
+
+@media screen and (max-width: 1000px) {
+  .only_pc {
+    display: none; } }
+
+.only_sp {
+  display: none; }
+  @media screen and (max-width: 1000px) {
+    .only_sp {
+      display: block; } }
+
+.wrap {
+  min-height: 100vh;
+  position: relative; }
+
+/*============sub layout============*/
+.float_ticket_wrap {
+  right: 0; }
+
+.contents_wrap {
+  width: 900px;
+  margin: 40px auto; }
+  @media screen and (max-width: 970px) {
+    .contents_wrap {
+      width: 98vw;
+      margin: 20px auto; } }
+
+.custom_flex_wrap {
+  display: flex; }
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #E1F000;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+  text-align: center; }
+  @media screen and (max-width: 970px) {
+    footer {
+      padding-bottom: 50px; } }
+  footer h2 {
+    width: 400px;
+    margin: 20px auto; }
+  footer p.footer_fb {
+    font-size: 1.6em;
+    line-height: 1.8em;
+    margin: 40px auto 20px; }
+  footer copy p {
+    margin: 40px auto 0;
+    padding-bottom: 0;
+    font-size: .8em;
+    line-height: 1.6em; }
+
+.icon_rightar {
+  width: 30px !important;
+  height: 1.6em; }
+
+/*============sub layout============*/
+.table_wrap {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+  padding: 20px 0; }
+  @media screen and (max-width: 970px) {
+    .table_wrap {
+      width: 90vw; } }
+
+/*access*/
+.access_table_wrap p {
+  margin: 0 auto 30px; }
+  .access_table_wrap p b {
+    padding-bottom: 10px; }
+.access_table_wrap h4 {
+  font-size: 2.4em;
+  line-height: 1.4em; }
+.access_table_wrap img {
+  width: 100%; }
+
+/*============outline============*/
+.outline_table_wrap {
+  font-weight: bold; }
+  .outline_table_wrap div.outline_date_flexwrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .outline_table_wrap div.outline_date_flexwrap p.outline_date_year {
+      width: 100px; }
+
+.outline_detail_wrap {
+  text-align: center;
+  margin: 80px auto; }
+  @media screen and (max-width: 400px) {
+    .outline_detail_wrap {
+      width: 90vw; } }
+  .outline_detail_wrap h3 {
+    font-size: 2.4em;
+    line-height: 1.4em; }
+    @media screen and (max-width: 400px) {
+      .outline_detail_wrap h3 {
+        font-size: 1.8em;
+        line-height: 1.4em; } }
+  .outline_detail_wrap img {
+    width: 90%;
+    margin: 80px auto 40px; }
+  .outline_detail_wrap h4 {
+    color: #000;
+    margin: 40px auto; }
+  .outline_detail_wrap p {
+    margin-bottom: 60px; }
+
+/*============outline============*/
+/*============history============*/
+.history_contents_wrap {
+  width: 100vw;
+  border-top: 1px solid #E0E0E0;
+  padding: 40px 0; }
+  @media screen and (max-width: 970px) {
+    .history_contents_wrap {
+      width: 98vw; } }
+
+.history_chronology_list {
+  width: 900px;
+  margin: 20px auto;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1.6em;
+  line-height: 1.8em;
+  color: #9A9A9A; }
+  @media screen and (max-width: 970px) {
+    .history_chronology_list {
+      width: 98vw; } }
+  .history_chronology_list li::after {
+    content: '/'; }
+  .history_chronology_list li:last-child::after {
+    content: ''; }
+  .history_chronology_list li a {
+    color: #9A9A9A;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: .9em;
+    padding: 0 5px; }
+    .history_chronology_list li a:hover {
+      color: #003D4C; }
+  @media screen and (max-width: 970px) {
+    .history_chronology_list li {
+      width: 20%;
+      border-right: 2px solid #9a9a9a;
+      line-height: 1em;
+      text-align: center;
+      margin: 5px 0; }
+      .history_chronology_list li::after {
+        content: ''; } }
+
+.custom_flex_wrap ul {
+  list-style: none; }
+@media screen and (max-width: 970px) {
+  .custom_flex_wrap {
+    display: block; } }
+.custom_flex_wrap .history_chronology_h {
+  min-width: 230px;
+  text-align: center; }
+  @media screen and (max-width: 1000px) {
+    .custom_flex_wrap .history_chronology_h {
+      width: 100%; } }
+  .custom_flex_wrap .history_chronology_h h3 {
+    font-size: 8em;
+    color: #000; }
+    .custom_flex_wrap .history_chronology_h h3 span {
+      border-bottom: 1px solid #000; }
+  .custom_flex_wrap .history_chronology_h p {
+    font-size: 1.4em;
+    line-height: 1.6em;
+    margin-top: 20px; }
+.custom_flex_wrap .history_chronology_detail_txt {
+  min-width: 400px;
+  margin: 0 10px; }
+  @media screen and (max-width: 1000px) {
+    .custom_flex_wrap .history_chronology_detail_txt {
+      min-width: auto;
+      width: 95%;
+      margin: 0 auto; } }
+  .custom_flex_wrap .history_chronology_detail_txt h4 {
+    margin: 20px 0 10px; }
+  .custom_flex_wrap .history_chronology_detail_txt ul {
+    padding: 0 10px; }
+    .custom_flex_wrap .history_chronology_detail_txt ul li {
+      font-size: 1.2em;
+      padding-left: 1.2em;
+      margin-bottom: 5px; }
+      .custom_flex_wrap .history_chronology_detail_txt ul li.history_li_title {
+        font-weight: bold;
+        font-size: 1.4em;
+        line-height: 1.6em;
+        padding-left: 0; }
+        .custom_flex_wrap .history_chronology_detail_txt ul li.history_li_title::before {
+          content: ''; }
+      .custom_flex_wrap .history_chronology_detail_txt ul li::before {
+        content: '- ';
+        margin-left: -7px; }
+.custom_flex_wrap .history_chronology_detail_img {
+  width: 245px; }
+  .custom_flex_wrap .history_chronology_detail_img img {
+    width: 245px; }
+  @media screen and (max-width: 1000px) {
+    .custom_flex_wrap .history_chronology_detail_img {
+      width: 98%;
+      margin: 20px auto 0; }
+      .custom_flex_wrap .history_chronology_detail_img ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly; }
+        .custom_flex_wrap .history_chronology_detail_img ul li {
+          width: 40%; }
+      .custom_flex_wrap .history_chronology_detail_img img {
+        width: 100%;
+        margin: 0 auto; } }
+
+/*============history============*/
+/*============ticket============*/
+div.ticket_table_wrap table {
+  border-top: solid #000 1px;
+  border-bottom: solid #000 1px;
+  border-spacing: 0;
+  width: 100%;
+  font-weight: bold;
+  margin: 20px auto 30px; }
+  div.ticket_table_wrap table th {
+    border-bottom: solid #000 1px;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    padding: 10px; }
+    @media screen and (max-width: 400px) {
+      div.ticket_table_wrap table th {
+        font-size: 1.6em;
+        line-height: 1.8em;
+        text-align: left; } }
+  div.ticket_table_wrap table td {
+    padding: 12px;
+    font-size: 1.6em;
+    line-height: 1.8em;
+    border-bottom: solid #EDEDED 1px;
+    text-align: center; }
+    div.ticket_table_wrap table td::last-child {
+      border-bottom: none; }
+    div.ticket_table_wrap table td.ticket_seattype {
+      color: #003D4C; }
+      @media screen and (max-width: 400px) {
+        div.ticket_table_wrap table td.ticket_seattype {
+          width: 30%; } }
+
+p.txt_notice {
+  font-size: 1.4em;
+  line-height: 1.6em; }
+
+div.ticket_subwrap {
+  border-top: solid #000 1px;
+  margin: 30px auto; }
+  div.ticket_subwrap dl {
+    border-bottom: solid #000 1px;
+    width: 100%;
+    padding: 20px 0; }
+    div.ticket_subwrap dl dt {
+      font-size: 1.8em;
+      line-height: 1.4em;
+      color: #003D4C;
+      font-weight: bold;
+      text-align: center; }
+      @media screen and (max-width: 400px) {
+        div.ticket_subwrap dl dt {
+          text-align: left;
+          margin-bottom: 10px; } }
+    div.ticket_subwrap dl dd {
+      font-size: 1.4em;
+      line-height: 1.6em; }
+      div.ticket_subwrap dl dd span {
+        font-size: 1.15em;
+        font-weight: bold; }
+
+div.bg_navy {
+  background: #003D4C;
+  padding: 10px 0;
+  margin: 40px auto;
+  color: #fff;
+  width: 1000px; }
+  @media screen and (max-width: 970px) {
+    div.bg_navy {
+      background: #fff;
+      color: #000;
+      width: 98vw;
+      margin: 0px auto; } }
+  div.bg_navy h3 {
+    color: #fff;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    margin-bottom: 15px; }
+    @media screen and (max-width: 400px) {
+      div.bg_navy h3 {
+        background: #003D4C;
+        padding: 20px 0; } }
+  @media screen and (max-width: 400px) {
+    div.bg_navy p {
+      font-size: 1.4em;
+      line-height: 1.6em; } }
+
+ul.seatingChart_list {
+  margin: 40px auto 10px;
+  width: 800px; }
+  @media screen and (max-width: 400px) {
+    ul.seatingChart_list {
+      width: 80vw;
+      margin-bottom: 40px; } }
+  ul.seatingChart_list li {
+    text-align: center; }
+    @media screen and (max-width: 400px) {
+      ul.seatingChart_list li {
+        margin-bottom: 10px; } }
+    ul.seatingChart_list li a {
+      margin: 0 5px;
+      border: 1px solid #000;
+      display: block;
+      padding: 20px; }
+
+p.ticket_notice {
+  margin-bottom: 80px;
+  font-size: 1.4em;
+  line-height: 1.6em; }
+
+table.ticketAgency_table {
+  border-top: solid #000 1px;
+  width: 100%;
+  border-spacing: 0;
+  margin: 40px auto; }
+  @media screen and (max-width: 400px) {
+    table.ticketAgency_table {
+      border: none; } }
+  table.ticketAgency_table th, table.ticketAgency_table td {
+    padding: 20px 0;
+    border-bottom: solid #000 1px; }
+    @media screen and (max-width: 400px) {
+      table.ticketAgency_table th, table.ticketAgency_table td {
+        display: block;
+        width: 100% !important;
+        border: none;
+        padding: 10px; } }
+  table.ticketAgency_table th {
+    font-size: 1.8em;
+    line-height: 1.4em;
+    vertical-align: text-top;
+    width: 35%;
+    text-align: left; }
+    @media screen and (max-width: 400px) {
+      table.ticketAgency_table th {
+        background: #E1F000; } }
+  table.ticketAgency_table td {
+    width: 65%;
+    font-size: 1.4em;
+    line-height: 1.6em; }
+    table.ticketAgency_table td dl {
+      border-bottom: solid #EDEDED 1px;
+      padding: 15px 0; }
+      table.ticketAgency_table td dl dt {
+        font-weight: bold; }
+        @media screen and (max-width: 400px) {
+          table.ticketAgency_table td dl dt {
+            float: left;
+            display: inline;
+            width: 30vw; } }
+      table.ticketAgency_table td dl.underline_black {
+        border-bottom: 1px solid #000;
+        margin-bottom: 15px; }
+      table.ticketAgency_table td dl.ticketAgency_dl_last {
+        border-bottom: 0; }
+      @media screen and (max-width: 400px) {
+        table.ticketAgency_table td dl dd {
+          float: right;
+          display: inline;
+          width: 60vw; } }
+
+.txt_navy {
+  color: #003D4C;
+  font-weight: bold; }
+
+.ticket_link {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #003D4C;
+  font-size: 1.1rem;
+  font-weight: bold; }
+  .ticket_link img {
+    margin-left: 10px; }
+
+/*============ticket============*/
+.index_news_list {
+  font-size: 1.6em;
+  line-height: 1.8em; }
+  @media screen and (max-width: 970px) {
+    .index_news_list {
+      width: 95vw;
+      margin: 0 auto; } }
+  .index_news_list dl {
+    padding: 10px 0;
+    border-bottom: 1px solid #E3E3E3;
+    line-height: 1.4em; }
+    @media screen and (max-width: 400px) {
+      .index_news_list dl dt {
+        margin-bottom: 10px; } }
+    .index_news_list dl:last-child {
+      border-bottom: none; }
+    .index_news_list dl a {
+      text-align: left; }
+
+/*============news============*/
+p.return {
+  margin: 40px auto 0; }

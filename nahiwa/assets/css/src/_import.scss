@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=japanese");
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 970px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)'
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.only_pc{
+  @include mq(lg){
+    display: none;
+  }
+}
+.only_sp{
+  display: none;
+  @include mq(lg){
+    display: block;
+  }
+}
+$color_yellow:#E1F000;
+$color_lemon:#FFFFAE;
+$color_navy:#003D4C;
+$color_gold:#828B00;
+$color_lgray:#E3E3E3;
+@mixin bg-yellow{ background: $color_yellow;}
+@mixin bg-navy{ background: $color_navy;}
+@mixin disp_onlysp{display: block; @include mq(){display: none;}}
+@mixin disp_onlypc{display: none; @include mq(){display: block;}}
+@mixin disp_none{display: none; @include mq(){display: block;}}
+@mixin txt_c{text-align: center;}
+@mixin txt_l{text-align: left;}
+@mixin txt_r{text-align: right;}
+@mixin txt_8{font-size:.8em; line-height: 1.6em;}
+@mixin txt_14{font-size:1.4em; line-height: 1.6em;}
+@mixin txt_16 {font-size: 1.6em; line-height: 1.8em;}
+@mixin txt_18 {font-size: 1.8em; line-height: 1.4em;}
+@mixin txt_20 {font-size: 2em; line-height: 1.4em;}
+@mixin txt_24 {font-size: 2.4em; line-height: 1.4em;}
+@mixin txt_30 {font-size: 3em; line-height: 1.8em;}
+@mixin txt_80 {font-size: 8em;}

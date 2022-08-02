@@ -1,0 +1,540 @@
+@import 'import';
+
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=japanese");
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 970px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)'
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.only_pc{
+  @include mq(lg){
+    display: none;
+  }
+}
+.only_sp{
+  display: none;
+  @include mq(lg){
+    display: block;
+  }
+}
+$color_yellow:#E1F000;
+$color_lemon:#FFFFAE;
+$color_navy:#003D4C;
+$color_gold:#828B00;
+$color_lgray:#E3E3E3;
+@mixin bg-yellow{ background: $color_yellow;}
+@mixin bg-navy{ background: $color_navy;}
+@mixin disp_onlysp{display: block; @include mq(){display: none;}}
+@mixin disp_onlypc{display: none; @include mq(){display: block;}}
+@mixin disp_none{display: none; @include mq(){display: block;}}
+@mixin txt_c{text-align: center;}
+@mixin txt_l{text-align: left;}
+@mixin txt_r{text-align: right;}
+@mixin txt_8{font-size:.8em; line-height: 1.6em;}
+@mixin txt_14{font-size:1.4em; line-height: 1.6em;}
+@mixin txt_16 {font-size: 1.6em; line-height: 1.8em;}
+@mixin txt_18 {font-size: 1.8em; line-height: 1.4em;}
+@mixin txt_20 {font-size: 2em; line-height: 1.4em;}
+@mixin txt_24 {font-size: 2.4em; line-height: 1.4em;}
+@mixin txt_30 {font-size: 3em; line-height: 1.8em;}
+@mixin txt_80 {font-size: 8em;}
+
+@mixin flex {display: flex;flex-direction: row;flex-wrap: wrap;}
+
+//↑↑20200713最新↑↑
+.wrap{
+    min-height: 100vh;
+    position: relative;
+}
+
+/*============sub layout============*/
+.float_ticket_wrap{
+    right: 0;
+}
+.contents_wrap{
+    width: 900px;
+    margin: 40px auto;
+    @include mq(){
+        width: 98vw;
+        margin: 20px auto;
+    }
+}
+
+.custom_flex_wrap{
+    display:flex;   
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    background-color: $color_yellow;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+    @include txt_c;
+    @include mq{
+        padding-bottom: 50px;
+    }
+    h2{
+        width: 400px;
+        margin: 20px auto;
+    }
+    p.footer_fb{
+    @include txt_16;
+    margin: 40px auto 20px;
+    }
+    copy p{
+        margin: 40px auto 0;
+        padding-bottom: 0;
+        @include txt_8;
+    }
+
+
+}
+
+.icon_rightar{
+    width: 30px !important;
+    height: 1.6em;
+}
+/*============sub layout============*/
+
+.table_wrap{
+    width: 100%;
+    margin: 0 auto;
+    border-bottom:  1px solid #000;
+    padding: 20px 0;
+    @include mq(){
+        width: 90vw;
+    }
+
+}
+
+/*access*/
+.access_table_wrap{
+    p{
+        margin: 0 auto 30px;
+        b{
+            padding-bottom: 10px;
+        }
+    }
+    h4{
+        @include txt_24;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+/*============outline============*/
+.outline_table_wrap{
+    font-weight:  bold;
+    div.outline_date_flexwrap{
+        @include flex;
+        p.outline_date_year{
+            width: 100px;
+        }
+    }
+}
+
+.outline_detail_wrap{
+    @include txt_c;
+    margin: 80px auto;
+    @include mq(sm){
+        width: 90vw;
+    }
+    h3{
+        @include txt_24;
+        @include mq(sm){
+            @include txt_18;
+        }
+    }
+    img{
+        width: 90%;
+        margin: 80px auto 40px;
+    }
+    h4{
+        color: #000;
+        margin: 40px auto;
+    }
+    p{
+        margin-bottom: 60px;
+    }
+}
+
+/*============outline============*/
+
+/*============history============*/
+
+.history_contents_wrap{
+    width: 100vw;
+    border-top: 1px solid #E0E0E0;
+    padding: 40px 0;
+    @include mq(){
+        width: 98vw;
+    }
+}
+
+.history_chronology_list{
+    width: 900px;
+    margin: 20px auto;
+    list-style: none;
+    @include flex;
+    @include txt_16;
+    @include mq(){
+        width: 98vw;
+    }
+    color: #9A9A9A;
+    li{
+        &::after{
+            content: '/';
+        }
+        &:last-child{
+            &::after{
+                content: '';
+            }
+        }
+        a{
+            color: #9A9A9A;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: .9em;
+            padding: 0 5px;
+            &:hover{
+                color: $color_navy;
+            }
+        }
+        @include mq{
+            width: 20%;
+            border-right: 2px solid #9a9a9a;
+            line-height: 1em;
+            text-align: center;
+            margin: 5px 0;
+            &::after{
+                content: '';
+            }
+
+        }
+    }
+
+}
+
+.custom_flex_wrap{
+    ul{
+    list-style:  none;
+    }
+    @include mq(){
+        display: block;
+    }
+    .history_chronology_h{
+        min-width: 230px;
+        @include mq(lg){
+            width: 100%;
+        }
+        @include txt_c;
+        h3{
+            @include txt_80;
+            color: #000;
+            span{
+                border-bottom: 1px solid #000;
+            }
+        }
+        p{
+            @include txt_14;
+            margin-top: 20px;
+        }
+    }
+    .history_chronology_detail_txt{
+        min-width: 400px;
+        margin: 0 10px;
+        @include mq(lg){
+            min-width: auto;
+            width: 95%;
+            margin: 0 auto;
+        }
+        h4{
+            margin: 20px 0 10px;
+        }
+        ul{
+            padding: 0 10px;
+            li{
+                &.history_li_title{
+                    font-weight: bold;
+                    @include txt_14;
+                    padding-left: 0;
+                    &::before{
+                        content: '';
+                    }
+                }
+                font-size: 1.2em;
+                padding-left: 1.2em;
+                margin-bottom: 5px;
+                &::before{
+                    content: '- ';
+                    margin-left: -7px;
+                }
+            }
+        }
+    }
+
+    .history_chronology_detail_img{
+        width: 245px;
+        img{
+            width: 245px;
+        }
+        @include mq(lg){
+            width: 98%;
+            margin: 20px auto 0;
+            ul{
+            @include flex;
+            justify-content: space-evenly;
+            li{
+                width: 40%;
+            }
+            }
+            img{
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/*============history============*/
+
+/*============ticket============*/
+@mixin bdr_b{ border-bottom:  solid #000 1px ;}
+@mixin bdr_t{ border-top:  solid #000 1px;}
+@mixin bdr_b_g{ border-bottom:  solid #EDEDED 1px ;}
+div.ticket_table_wrap{
+    table{
+        @include bdr_t;
+        @include bdr_b;
+        border-spacing: 0;
+        width: 100%;
+        font-weight: bold;
+        margin: 20px auto 30px;
+        th{
+        @include bdr_b;
+        @include txt_18;
+        padding: 10px;
+        @include mq(sm){
+            @include txt_16;
+            @include txt_l;
+        }
+        }
+        td{
+            padding: 12px;
+            @include txt_16;
+            @include bdr_b_g;
+            @include txt_c;
+            &::last-child{
+                border-bottom: none;
+            }
+            &.ticket_seattype{
+                color:$color_navy;
+                @include mq(sm){
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+p.txt_notice{
+    @include txt_14;
+}
+
+div.ticket_subwrap{
+    @include bdr_t;
+    margin: 30px auto;
+    dl{
+        @include bdr_b;
+        width: 100%;
+        padding: 20px 0;
+        dt{
+            @include txt_18;
+            color:$color_navy; 
+            font-weight: bold;
+            @include txt_c;
+            @include mq(sm){
+                @include txt_l;
+                margin-bottom: 10px;
+            }
+        }
+        dd{
+            @include txt_14;
+            span{
+                font-size: 1.15em;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+div.bg_navy{
+    @include bg-navy;
+    padding: 10px 0;
+    margin: 40px auto;
+    color: #fff;
+    width: 1000px;
+    @include mq(){
+        background: #fff;
+        color: #000;
+        width: 98vw;
+        margin: 0px auto;
+    }
+    h3{
+        color: #fff;
+        @include txt_18;
+        margin-bottom: 15px;
+        @include mq(sm){
+            @include bg-navy;
+            padding: 20px 0;
+        }
+    }
+    p{
+        @include mq(sm){
+            @include txt_14;
+        }
+    }
+}
+
+ul.seatingChart_list{
+    margin: 40px auto 10px;
+    width: 800px;
+    @include mq(sm){
+        width: 80vw;
+        margin-bottom: 40px;
+    }
+    li{
+        @include txt_c;
+        @include mq(sm){
+            margin-bottom: 10px;
+        }
+        a{
+            margin: 0 5px;
+            border: 1px solid #000;
+            display: block;
+            padding: 20px
+        }
+    }
+}
+p.ticket_notice{
+    margin-bottom: 80px;
+    @include txt_14;
+}
+
+table.ticketAgency_table{
+    @include bdr_t;
+    width: 100%;
+    border-spacing: 0;
+    margin: 40px auto;
+    @include mq(sm){
+        border: none;
+    }
+    th,td{
+        padding: 20px 0;
+        @include bdr_b;
+        @include mq(sm){
+            display: block;
+            width: 100% !important;
+            border: none;
+            padding: 10px;
+        }
+    }
+    th{
+        @include txt_18;
+        vertical-align: text-top;
+        width: 35%;
+        @include txt_l;
+        @include mq(sm){
+            background: $color_yellow;
+        }
+    }
+    td{
+        width: 65%;
+        @include txt_14;
+        dl{
+            @include bdr_b_g;
+            padding: 15px 0;
+            dt{
+                font-weight: bold;
+                @include mq(sm){
+                    float: left;
+                    display: inline;
+                    width: 30vw;
+                }
+            }
+            &.underline_black{
+                border-bottom: 1px solid #000;
+                margin-bottom: 15px;
+            }
+            &.ticketAgency_dl_last{
+                border-bottom: 0;
+            }
+            dd{
+                @include mq(sm){
+                    float: right;
+                    display: inline;
+                    width: 60vw;
+                }
+            }
+        }
+    }
+}
+.txt_navy{
+    color: $color_navy;
+    font-weight: bold;
+}
+.ticket_link{
+    width: 100%;
+    padding: 10px 0;
+    @include txt_c;
+    color: $color_navy;
+    font-size: 1.1rem;
+    font-weight: bold;
+    img{
+        margin-left: 10px;
+    }
+}
+
+/*============ticket============*/
+
+
+.index_news_list{
+    @include txt_16;
+    @include mq(){
+        width: 95vw;
+        margin:  0 auto;
+    }
+    dl{
+    padding: 10px 0;
+    border-bottom: 1px solid $color_lgray;
+    line-height: 1.4em;
+    @include mq(sm){
+        dt{
+            margin-bottom: 10px;
+        }
+    }
+        &:last-child{
+            border-bottom: none;
+        }
+        a{
+            text-align: left;
+        }
+    }
+}
+/*============news============*/
+p.return{
+    margin: 40px auto 0;
+}
