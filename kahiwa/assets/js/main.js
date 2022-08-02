@@ -29,7 +29,17 @@ $('#menu ').on('click', function(event) {
     });
     $(".inline-5").modaal({
         fullscreen:true
-    });$('.image-1').modaal({
+    });
+    $(".inline-6").modaal({
+        fullscreen:true
+    });
+    $(".inline-7").modaal({
+        fullscreen:true
+    });
+    $(".inline-8").modaal({
+        fullscreen:true
+    });
+    $('.image-1').modaal({
         type: 'image'
     });$('.image-2').modaal({
         type: 'image'
